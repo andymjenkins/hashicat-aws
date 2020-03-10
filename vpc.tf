@@ -1,12 +1,3 @@
-provider "aws" {
-  region = "eu-west-1"
-}
-
-data "aws_security_group" "default" {
-  name   = "default"
-  vpc_id = module.vpc.vpc_id
-}
-
 module "vpc" {
   source = "../../"
 
@@ -33,6 +24,6 @@ module "vpc" {
   }
 
   vpc_tags = {
-    Name = "vpc-name"
+    Name = "vpc4gurav"
   }
 }
